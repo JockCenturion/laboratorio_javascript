@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cardápio</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css">
+    
+</head>
+<body class="container">
+    
+    <h1 class="text-center">Cardápio</h1>
+
+    <div style="margin-bottom: 2rem">
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th>Especificação</th>
+                <th>Código</th>
+                <th>Preço</th>
+            </tr>
+
+            <tr>
+                <td>Cachorro Quente</td>
+                <td>100</td>
+                <td>1,20</td>
+            </tr>
+
+            <tr>
+                <td>Bauru simples</td>
+                <td>101</td>
+                <td>1,30</td>
+            </tr>
+
+            <tr>
+                <td>Bauru com ovo</td>
+                <td>102</td>
+                <td>1,50</td>
+            </tr>
+
+            <tr>
+                <td>Hambúrguer</td>
+                <td>103</td>
+                <td>1,20</td>
+            </tr>
+
+            <tr>
+                <td>Cheeseburguer</td>
+                <td>104</td>
+                <td>1,30</td>
+            </tr>
+
+            <tr>
+                <td>Refrigerante</td>
+                <td>105</td>
+                <td>1,00</td>
+            </tr>
+        </table>
+   
+        <form class="form" onsubmit="return pedidoController.adiciona(event )">
+            
+            <div class="form-group">
+                <label for="codigo_item">Código do Item</label>
+                <input type="text" id="codigo_item" value="100" class="form-control" required autofocus value="" />
+            </div>
+
+            <div class="form-group">
+                <label for="quantidade">Quantidade</label>
+                <input type="number" min="1" step="1" id="quantidade" class="form-control" value="2" required />
+            </div>
+
+            <div class="text-center">
+                <button id="btnCadastro" class="btn btn-primary" 
+                        type="submit">Incluir Produtos</button>
+                <button class="btn btn-default" 
+                        type="reset">Limpar Formulário</button>
+            </div>
+        
+        </form>
+   </div> 
+   <!--  <table class="table table-hover table-bordered">
+        <thead>
+            <tr>
+                <th>NOME</th>
+                <th>QUANTIDADE</th>
+                <th>VALOR UNITÁRIO</th>
+                <th>SUBTOTAL</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        </tbody>
+        
+        <tfoot></tfoot>
+    </table> -->
+
+    <div id="js-pedidoVendaView"></div>
+
+    <script src="js/app/models/ItemPedido.js"></script>
+    <script src="js/app/controllers/PedidoController.js"></script>
+    <script src="js/app/models/Pedido.js"></script>
+    <script src="js/app/views/PedidoView.js"></script>
+ 
+    <script>
+       let pedidoController = new PedidoController();
+    </script>
+
+</body>
+</html>

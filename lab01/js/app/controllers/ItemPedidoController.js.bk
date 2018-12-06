@@ -1,0 +1,24 @@
+class ItemPedidoController {
+    
+    constructor() {
+        
+        let $ = document.querySelector.bind(document);
+       
+        this._inputCodigoItem = $('#codigo_item');
+        this._inputQuantidade = $('#quantidade');
+    }
+    
+    adiciona(event) {
+        
+        event.preventDefault();
+      
+        let item = new ItemPedido(
+            this._inputCodigoItem.value,
+            this._inputQuantidade.value,
+        );
+
+        // adiciona no objeto pedido ...
+        
+        console.log(item );
+    }
+}
