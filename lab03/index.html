@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gerador de Tabela</title>
+	<title>Transforma Data Em Extenso</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body class="container">
 
-	<h1 class="text-center">Gerador de Tabelas</h1>
+	<h1 class="text-center">Transforma Data Em Extenso</h1>
     <div style="margin-bottom: 2rem">
     
-	    <form class="form" onsubmit="gerarTabelaController.adiciona(event )">
+	    <form class="form" onsubmit="transformaDataEmExtenso(event)">
 	        
 	        <div class="form-group">
-	            <label for="numero1">Número 1:</label>
-	            <input type="text" id="numero1" value="2" class="form-control" required autofocus value="" />
-	        </div>
-
-	        <div class="form-group">
-	            <label for="numero2">Número 2:</label>
-	            <input type="number" min="1" step="1" id="numero2" class="form-control" value="1" required />
+	            <label for="data">Digite uma data: </label>
+	            <input type="text" id="data" value="01/01/2018" class="form-control" required autofocus value="" />
 	        </div>
 
 	        <div class="text-center">
@@ -33,16 +29,8 @@
 	    </form>
    	</div> 
 
-    <div id="js-pedidoVendaView"></div>
+    <div id="js-divResultado"></div>
 
-    <script src="js/app/models/GerarTabela.js"></script>
-    <script src="js/app/models/Operacao.js"></script>
-    <script src="js/app/controllers/GerarTabelaController.js"></script>
-    <script src="js/app/views/GerarTabelaView.js"></script>
- 
-    <script>
-       let gerarTabelaController = new GerarTabelaController();
-    </script>
 
 </body>
 </html>
